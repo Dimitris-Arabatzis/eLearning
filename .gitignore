@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.vs/slnx.sqlite
+.vs/eLearning/FileContentIndex/1fa4d817-6d7e-45dd-9bc5-ecd48c90d2ed.vsidx
+.vs/eLearning/v17/.suo
+.vs/eLearning/FileContentIndex/read.lock
+.vs/VSWorkspaceState.json
