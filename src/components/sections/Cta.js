@@ -52,7 +52,7 @@ const Cta = ({
           className={innerClasses}
         >
           <div className="cta-slogan">
-            <h3 className="m-0">
+            <h3 className="m-0" style={{color:"white"}}>
               Ενημερωθείτε όταν είμαστε έτοιμοι..
               </h3>
           </div>
