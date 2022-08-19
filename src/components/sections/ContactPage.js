@@ -4,6 +4,10 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
 
+
+const mail = require('@sendgrid/mail')
+mail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY)
+
 const propTypes = {
   ...SectionProps.types,
   split: PropTypes.bool
@@ -27,7 +31,7 @@ const Cta = ({
 }) => {
 
   const outerClasses = classNames(
-    'cta section center-content-mobile reveal-from-bottom',
+    'cta section center-content-mobile reveal-from-bottom m01',
     topOuterDivider && 'has-top-divider',
     bottomOuterDivider && 'has-bottom-divider',
     hasBgColor && 'has-bg-color',
@@ -36,7 +40,7 @@ const Cta = ({
   );
 
   const innerClasses = classNames(
-    'cta-inner section-inner',
+    'cta-inner section-inner clip',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'
@@ -76,20 +80,43 @@ const Cta = ({
       return false
     }
 
-    //console.log(data);
-    fetch('/api/sendmail', {
-      method: 'post',
-      body: JSON.stringify(data),
-    })
+    const mailMessage = `
+    Name: ${data.name}\r\n
+    Email: ${data.email}\r\n
+    Company: ${data.company}\r\n
+    Country: ${data.country}\r\n
+    Message: ${data.message}
+  `
 
+  const mailData = {
+    to: 'jim.araba@gmail.com',
+    from: 'jim.araba@gmail.com',
+    subject: `New message from ${data.name}`,
+    text: mailMessage,
+    html: mailMessage.replace(/\r\n/g, '<br />'),
+  }
+  alert(mailMessage)
+  alert(process.env.REACT_APP_SENDGRID_API_KEY)
+  //await mail.send(mailData)
+    
+  mail
+  .send(mailData)
+  .then(()=>{
+    resetFields();
+    alert('Thank you for contacting me! I am trying my best to reply the soonest!')
+  })
+  .catch((error)=>{
+    alert(error);
+  }) 
+  }
+
+  const resetFields = () => {
     setName('')
     setEmail('')
     setMessage('')
     setCompanyName('')
     setCountry('')
-    alert('Thank you for contacting me! I am trying my best to reply the soonest!')
   }
-
   return (
 
     
@@ -97,7 +124,7 @@ const Cta = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container" id='signup'>
+      <div className="" id='signup'>
         <div
           className={innerClasses}
         >
@@ -105,31 +132,29 @@ const Cta = ({
       <div className="my-12 flex w-full items-center justify-center">
         <div className="top-40 rounded bg-white py-12 px-8 shadow-2xl lg:px-28">
           <p className="text-center text-xl font-bold leading-7 text-gray-700 md:text-3xl">
-            Let’s chat!
+            Ελάτε να μιλήσουμε!
           </p>
           <div className="mt-12 items-center md:flex">
             <div className="flex flex-col md:w-72">
-              <label className="text-base font-semibold leading-none text-gray-800">Name</label>
+              <label className="text-base font-semibold leading-none text-gray-800">Όνομα*</label>
               <input
                 tabIndex={0}
                 arial-label="Please input name"
                 type="name"
                 className="focus:oultine-none mt-4 rounded border border-gray-200 bg-gray-100 p-3 text-base leading-none text-gray-900 placeholder-gray-100 focus:border-indigo-700"
-                placeholder="Please input  name"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
               />
             </div>
             <div className="mt-4 flex flex-col md:ml-6 md:mt-0 md:w-72">
               <label className="text-base font-semibold leading-none text-gray-800">
-                Email Address
+                Email*
               </label>
               <input
                 tabIndex={0}
                 arial-label="Please input email address"
                 type="email"
                 className="focus:oultine-none mt-4 rounded border border-gray-200 bg-gray-100 p-3 text-base leading-none text-gray-900 placeholder-gray-100 focus:border-indigo-700"
-                placeholder="Please input email address"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />
@@ -138,7 +163,7 @@ const Cta = ({
           <div className="mt-8 items-center md:flex">
             <div className="flex flex-col md:w-72">
               <label className="text-base font-semibold leading-none text-gray-800">
-                Company name
+                Εταιρία
               </label>
               <input
                 tabIndex={0}
@@ -146,19 +171,17 @@ const Cta = ({
                 arial-label="Please input company name"
                 type="name"
                 className="focus:oultine-none mt-4 rounded border border-gray-200 bg-gray-100 p-3 text-base leading-none text-gray-900 placeholder-gray-100 focus:border-indigo-700 "
-                placeholder="Please input company name"
                 onChange={(e) => setCompanyName(e.target.value)}
                 value={company}
               />
             </div>
             <div className="mt-4 flex flex-col md:ml-6 md:mt-0 md:w-72">
-              <label className="text-base font-semibold leading-none text-gray-800">Country</label>
+              <label className="text-base font-semibold leading-none text-gray-800">Γλώσσα ενδιαφέροντος</label>
               <input
                 tabIndex={0}
                 arial-label="Please input country name"
                 type="name"
                 className="focus:oultine-none mt-4 rounded border border-gray-200 bg-gray-100 p-3 text-base leading-none text-gray-900 placeholder-gray-100 focus:border-indigo-700"
-                placeholder="Please input country name"
                 onChange={(e) => setCountry(e.target.value)}
                 value={country}
               />
@@ -166,7 +189,7 @@ const Cta = ({
           </div>
           <div>
             <div className="mt-8 flex w-full flex-col">
-              <label className="text-base font-semibold leading-none text-gray-800">Message</label>
+              <label className="text-base font-semibold leading-none text-gray-800">Μήνυμα*</label>
               <textarea
                 tabIndex={0}
                 aria-label="leave a message"
@@ -179,14 +202,14 @@ const Cta = ({
             </div>
           </div>
           <p className="mt-4 text-xs leading-3 text-gray-600">
-            By clicking submit you agree to share your info with me.
+            Πατώντας αποστολή συναινείτε να μοιραστείτε τα στοιχεία σας με την ομάδα μας.
           </p>
           <div className="flex w-full items-center justify-center pt-12 pb-8">
             <button
               type="submit"
-              className="rounded-full bg-green-600 py-2 px-4 font-bold hover:bg-green-500"
+              className="button button-primary button-wide-mobile button-md"
             >
-              Send Message
+              Αποστολή
             </button>
           </div>
         </div>
