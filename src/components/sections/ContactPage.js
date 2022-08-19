@@ -96,7 +96,7 @@ const Cta = ({
     html: mailMessage.replace(/\r\n/g, '<br />'),
   }
   alert(mailMessage)
-  alert(process.env.REACT_APP_SENDGRID_API_KEY)
+  //alert(process.env.REACT_APP_SENDGRID_API_KEY)
   //await mail.send(mailData)
     
   mail
