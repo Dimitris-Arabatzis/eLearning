@@ -19,10 +19,10 @@ const FooterNav = ({
     >
       <ul className="list-reset">
         <li>
-          <Link to="#0">Επικοινωνία</Link>
+          <Link to="/contact">Επικοινωνία</Link>
         </li>
         <li>
-          <Link to="#0">Ποιοί Είμαστε</Link>
+          <Link to="/about">Ποιοί Είμαστε</Link>
         </li>
       </ul>
     </nav>

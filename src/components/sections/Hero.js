@@ -65,11 +65,13 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Η υπηρεσία που αλλάζει τον τρόπο που μαθαίνετε νέες γλώσσες!
+              Η ομάδα της Lingi, σε καλωσορίζει στον υπέροχο κόσμο της μάθησης, με σύγχρονους τρόπους διδασκαλίας ξένων γλωσσών από οπουδήποτε και οποτεδήποτε εσύ θελήσεις. 
+Προσφέρουμε κάτι μοναδικό που σίγουρα δεν θες να χάσεις! Οπότε συμπλήρωσε το email σου και δώσε μας λίγο χρόνο όσο ετοιμάζουμε κάτι ξεχωριστό για σένα!
+
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="#">
+                  <Button tag="a" color="primary" wideMobile href="/about">
                     Ποιοί Είμαστε;
                     </Button>
                   {/* <Button tag="a" color="dark" wideMobile href="https://www.instagram.com/lingi/">
