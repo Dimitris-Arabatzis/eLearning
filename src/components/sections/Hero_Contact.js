@@ -14,7 +14,7 @@ const defaultProps = {
   ...SectionProps.defaults
 }
 
-const Hero = ({
+const Hero_Contact = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -61,24 +61,12 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Γεια σας! Καλωσήρθατε στη <span className="text-color-primary">Lingi.gr</span>
+              Επικοινωνήστε μαζί μας!
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-              Η ομάδα της Lingi, σε καλωσορίζει στον υπέροχο κόσμο της μάθησης, με σύγχρονους τρόπους διδασκαλίας ξένων γλωσσών από οπουδήποτε και οποτεδήποτε εσύ θελήσεις. 
-Προσφέρουμε κάτι μοναδικό που σίγουρα δεν θες να χάσεις! Οπότε συμπλήρωσε το email σου και δώσε μας λίγο χρόνο όσο ετοιμάζουμε κάτι ξεχωριστό για σένα!
-
+              Η ομάδα της Lingi, σε καλωσορίζει στον υπέροχο κόσμο της μάθησης ξένων γλωσσών. Προσφέρουμε κάτι μοναδικό που σίγουρα δεν θες να χάσεις! Οπότε συμπλήρωσε το email σου και δώσε μας λίγο χρόνο όσο ετοιμάζουμε κάτι ξεχωριστό για σένα!
                 </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="/contact">
-                    Επικοινωνήστε μαζί μας
-                    </Button>
-                  {/* <Button tag="a" color="dark" wideMobile href="https://www.instagram.com/lingi/">
-                    Instagram
-                    </Button> */}
-                </ButtonGroup>
-              </div>
             </div>
           </div>
           {/* <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
@@ -108,7 +96,7 @@ const Hero = ({
   );
 }
 
-Hero.propTypes = propTypes;
-Hero.defaultProps = defaultProps;
+Hero_Contact.propTypes = propTypes;
+Hero_Contact.defaultProps = defaultProps;
 
-export default Hero;
+export default Hero_Contact;

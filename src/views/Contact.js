@@ -1,6 +1,7 @@
 import React from 'react';
 // import sections
-import Hero from '../components/sections/Hero';
+import Hero_Contact from '../components/sections/Hero_Contact';
+import ContactPage from '../components/sections/ContactPage'
 import FeaturesTiles from '../components/sections/FeaturesTiles';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
 import SecondOffering from '../components/sections/SecondOffering';
@@ -11,11 +12,12 @@ const Home = () => {
 
   return (
     <>
-      <Hero className="illustration-section-01" />
-      <Cta split />
+      <Hero_Contact className="illustration-section-01" />
+      <ContactPage></ContactPage>
+      {/* 
       <SecondOffering/>
       <FeaturesTiles topDivider/>
-      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
+      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" /> */}
       {/* <Testimonial topDivider /> */}
     </>
   );

@@ -45,7 +45,7 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'Πως μαθαίνω;',
-    paragraph: 'Μάθετε την γλώσσα που επιθυμείτε με το online φροντιστήριο. Τα μαθήματα είναι όπως του φροντιστήριου απλά, από την άνεση του σπιτιού σας!'
+    paragraph: 'Μάθε την γλώσσα που επιθυμείς με το online φροντιστήριο. Τα μαθήματα είναι όπως του φροντιστήριου, από την άνεση του σπιτιού σου!'
   };
 
   return (
@@ -74,73 +74,7 @@ const FeaturesTiles = ({
                     Ενότητες ανά επίπεδο
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
-                      alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Τεστ γνώσεων
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
-                      alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Εύκολη διαδικασία
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Εξειδικευμένοι καθηγητές
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  Κάθε επίπεδο έχει τουλάχιστον 50 ώρες από βίντεο, ασκήσεις, και τεστ!
                     </p>
                 </div>
               </div>
@@ -162,7 +96,75 @@ const FeaturesTiles = ({
                     Δικό σας ωράριο
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  Συνδέσου όποτε θέλεις. Αν ξεχαστείς, θα στο θυμίσουμε εμείς.
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
+                      alt="Features tile icon 03"
+                      width={64}
+                      height={64} />
+                  </div>
+                </div>
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">
+                    Εύκολη διαδικασία
+                    </h4>
+                  <p className="m-0 text-sm">
+                  Απλά κάνε εγγραφή, και άσε μας να σε κατευθύνουμε!
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="tiles-item reveal-from-bottom">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
+                      alt="Features tile icon 04"
+                      width={64}
+                      height={64} />
+                  </div>
+                </div>
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">
+                    Εξειδικευμένοι καθηγητές
+                    </h4>
+                  <p className="m-0 text-sm">
+                  Οι καθηγητές μας είναι άτομα με όραμα. Άτομα που θέλουν να μοιράσουν τις γνώσεις τους παντού! (και σε σένα 😛)
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
+                      alt="Features tile icon 02"
+                      width={64}
+                      height={64} />
+                  </div>
+                </div>
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">
+                    Τεστ γνώσεων
+                    </h4>
+                  <p className="m-0 text-sm">
+                  Στο τέλος κάθε μαθήματος καλείσαι να δώσεις ένα μικρό τεστάκι για να δεις την πρόοδό σου. Μην ανησυχείς, μπορείς να το δώσεις όσες φορές θέλεις.
                     </p>
                 </div>
               </div>
@@ -184,7 +186,7 @@ const FeaturesTiles = ({
                     Συνεχής βελτίωση
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  Στόχος μας είναι να προσφέρουμε κάτι ξεχωριστό και όσο πιο ποιοτικό γίνεται. Για αυτό κάθε μέρα προσπαθούμε να γίνουμε ακόμα καλύτεροι, μέσα από αξιολογήσεις και συνεχόμενη τριβή.
                     </p>
                 </div>
               </div>
