@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
+import emailjs from '@emailjs/browser';
 
 
-const mail = require('@sendgrid/mail')
-mail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY)
 
 const propTypes = {
   ...SectionProps.types,
@@ -52,6 +51,14 @@ const Cta = ({
   const [company, setCompanyName] = useState('')
   const [country, setCountry] = useState('')
 
+  const data = {
+    name,
+    email,
+    message,
+    company,
+    country,
+  }
+
   function isValid(str) {
     if (str.trim() === '') {
       return false
@@ -61,14 +68,6 @@ const Cta = ({
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    const data = {
-      name,
-      email,
-      message,
-      company,
-      country,
-    }
 
     if (!isValid(data.email)) {
       alert('⛔️ Please add an email.')
@@ -80,34 +79,21 @@ const Cta = ({
       return false
     }
 
-    const mailMessage = `
-    Name: ${data.name}\r\n
-    Email: ${data.email}\r\n
-    Company: ${data.company}\r\n
-    Country: ${data.country}\r\n
-    Message: ${data.message}
-  `
-
-  const mailData = {
-    to: 'jim.araba@gmail.com',
-    from: 'jim.araba@gmail.com',
-    subject: `New message from ${data.name}`,
-    text: mailMessage,
-    html: mailMessage.replace(/\r\n/g, '<br />'),
-  }
-  alert(mailMessage)
-  //alert(process.env.REACT_APP_SENDGRID_API_KEY)
-  //await mail.send(mailData)
+    var templateParams = {
+      temp_name: data.name,
+      temp_email: data.email,
+      temp_message: data.message,
+      temp_company: data.company,
+      temp_country: data.country
+    };
     
-  mail
-  .send(mailData)
-  .then(()=>{
-    resetFields();
-    alert('Thank you for contacting me! I am trying my best to reply the soonest!')
-  })
-  .catch((error)=>{
-    alert(error);
-  }) 
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+        .then(function(response) {
+           alert("Thank you! We received your email. We are trying your best to get back to you as soon as possible!");
+           resetFields();
+        }, function(error) {
+           console.log('FAILED...', error);
+        });
   }
 
   const resetFields = () => {
@@ -117,6 +103,7 @@ const Cta = ({
     setCompanyName('')
     setCountry('')
   }
+
   return (
 
     
@@ -136,7 +123,7 @@ const Cta = ({
           </p>
           <div className="mt-12 items-center md:flex">
             <div className="flex flex-col md:w-72">
-              <label className="text-base font-semibold leading-none text-gray-800">Όνομα*</label>
+              <label className="text-base font-semibold leading-none text-gray-800">Όνομα</label>
               <input
                 tabIndex={0}
                 arial-label="Please input name"
