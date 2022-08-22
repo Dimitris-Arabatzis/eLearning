@@ -6,12 +6,14 @@ import FeaturesSplit from '../components/sections/FeaturesSplit';
 import SecondOffering from '../components/sections/SecondOffering';
 import Testimonial from '../components/sections/Testimonial';
 import Cta from '../components/sections/Cta';
+import CallToAction from '../components/sections/CallToAction';
 
 const Home = () => {
 
   return (
     <>
       <Hero className="illustration-section-01" />
+      <CallToAction/>
       <Cta split />
       <SecondOffering />
       <FeaturesTiles topDivider/>

@@ -262,3 +262,50 @@
 .m01{
     margin-top: -2rem;
 }
+
+.cta-choises{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.cta-choises div{
+    border: 1px;
+    border-radius: 10px;
+    height: 10rem;
+    padding: 20px;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+.cta-choises img{
+    margin-bottom: 1rem;
+}
+
+.cta-choosen{
+    border: 3px solid black !important;
+    box-shadow: 5px 10px;
+}
+
+.cta-action{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.cta-action input{
+    margin-bottom: 1rem;
+    background-color: #ECEDED;
+    border: px solid black !important;
+}
+
