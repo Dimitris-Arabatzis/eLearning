@@ -320,3 +320,9 @@
     color: #6163FF;
     background-color: aliceblue;
 }
+
+.cta-action-group a:hover{
+    color: aliceblue;
+    background-color: 6163FF;
+    border: 1px solid aliceblue;
+}
