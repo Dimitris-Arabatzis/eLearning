@@ -314,3 +314,8 @@
     border: 2px solid red !important;
 }
 
+
+.cta-action-group a{
+    color: #6163FF;
+    background-color: aliceblue;
+}

@@ -138,7 +138,7 @@ const CallToAction = ({
                 <p>Είμαι καθηγητής!</p>
             </div>
           </div>
-          <div className='cta-action'>
+          <div className='cta-action cta-action-group'>
             <Input id="newsletter" type="email" label="Subscribe" labelHidden placeholder="Εmail" value={email} onChange={handleEmailChange}>
             </Input>
             <Button tag="a" color="primary" wideMobile onClick={sendMail}>
