@@ -65,10 +65,10 @@ const CallToAction = ({
 
   const handleClick = (who) => {
     setSubscribedAs(who)
-    if(who=="student"){
+    if(who==="student"){
       setIsStudentActive(true);
       setIsTeacherActive(false);
-    }else if(who=="teacher"){
+    }else if(who==="teacher"){
       setIsStudentActive(false);
       setIsTeacherActive(true);
     }
@@ -87,7 +87,7 @@ const CallToAction = ({
   };
 
   const sendMail = event => {
-    if(subscribesAs==""){
+    if(subscribesAs===""){
       Notify.failure("⛔️Παρακαλώ επιλέξτε αν είστε καθηγητής ή μαθητής.");
 
       return;
@@ -96,13 +96,12 @@ const CallToAction = ({
       Notify.failure("⛔️Παρακαλώ προσθέστε σωστά το email.");
       return;
     }
-    console.log(templateParams);
-    // emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
-    // .then(function(response) {
-    //    Notify.success("Λάβαμε το αίτημα σου και θα επικοινωνήσουμε μαζί σου σε λίγο καιρό!");
-    // }, function(error) {
-    //    console.log('FAILED...', error);
-    // });
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    .then(function(response) {
+       Notify.success("Λάβαμε το αίτημα σου και θα επικοινωνήσουμε μαζί σου σε λίγο καιρό!");
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
     setEmail('');
   }
   

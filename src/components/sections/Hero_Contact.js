@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import ButtonGroup from '../elements/ButtonGroup';
-import Button from '../elements/Button';
-import Image from '../elements/Image';
-import Modal from '../elements/Modal';
 
 const propTypes = {
   ...SectionProps.types
@@ -14,7 +10,7 @@ const defaultProps = {
   ...SectionProps.defaults
 }
 
-const Hero_Contact = ({
+const HeroContact = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -24,18 +20,6 @@ const Hero_Contact = ({
   invertColor,
   ...props
 }) => {
-
-  const [videoModalActive, setVideomodalactive] = useState(false);
-
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
-
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  }   
 
   const outerClasses = classNames(
     'hero section center-content',
@@ -96,7 +80,7 @@ const Hero_Contact = ({
   );
 }
 
-Hero_Contact.propTypes = propTypes;
-Hero_Contact.defaultProps = defaultProps;
+HeroContact.propTypes = propTypes;
+HeroContact.defaultProps = defaultProps;
 
-export default Hero_Contact;
+export default HeroContact;
