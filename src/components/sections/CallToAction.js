@@ -6,6 +6,7 @@ import Input from '../elements/Input';
 import Image from '../elements/Image';
 import Button from '../elements/Button';
 import {useState} from 'react';
+import emailjs from '@emailjs/browser';
 
 
 const propTypes = {
@@ -48,9 +49,22 @@ const CallToAction = ({
 
   const [isStudentActive, setIsStudentActive] = useState(false);
   const [isTeacherActive, setIsTeacherActive] = useState(false);
+  const [subscribesAs, setSubscribedAs] = useState("");
+  const [email, setEmail] = useState('');
+  const [isMailValid, setIsMailValid] = useState(null);
+
+  const handleEmailChange = event => {
+    setEmail(event.target.value);
+    if (!isValidEmail(event.target.value)) {
+      setIsMailValid(false);
+    }else{
+      setIsMailValid(true);
+    }
+    console.log(isMailValid);
+  };
 
   const handleClick = (who) => {
-    // 👇️ toggle isActive state on click
+    setSubscribedAs(who)
     if(who=="student"){
       setIsStudentActive(true);
       setIsTeacherActive(false);
@@ -59,6 +73,38 @@ const CallToAction = ({
       setIsTeacherActive(true);
     }
   };
+
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  var templateParams = {
+    temp_name: "Email registered",
+    temp_email: email,
+    temp_message: "A person with email "+ email + " just subscribed as a " + subscribesAs,
+    temp_company: "",
+    temp_country: ""
+  };
+
+  const sendMail = event => {
+    if(subscribesAs==""){
+      alert("Παρακαλώ επιλέξτε αν είστε καθηγητής ή μαθητής.");
+      return;
+    }
+    if(!isMailValid){
+      alert("Παρακαλώ προσθέστε σωστά το email.");
+      return;
+    }
+    console.log(templateParams);
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    .then(function(response) {
+       alert("Λάβαμε το αίτημα σου και θα επικοινωνήσουμε μαζί σου σε λίγο καιρό!");
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+    setEmail('');
+  }
+  
 
   return (
     <section
@@ -81,7 +127,7 @@ const CallToAction = ({
                 src={require('./../../assets/images/CallToAction/student.png')}
                 alt="Hero"
                 width={100} />
-                <p>I am a student!</p>
+                <p>Είμαι μαθητής!</p>
             </div>
             <div className={isTeacherActive ? 'cta-choise-teacher cta-choosen' : 'cta-choise-student'} onClick={() =>handleClick("teacher")}>
               <Image
@@ -89,14 +135,13 @@ const CallToAction = ({
                 src={require('./../../assets/images/CallToAction/teacher.png')}
                 alt="Hero"
                 width={100} />
-                <p>I am a teacher!</p>
+                <p>Είμαι καθηγητής!</p>
             </div>
           </div>
-          <div className="cta-action">
-            <Input id="newsletter" type="email" label="Subscribe" labelHidden placeholder="Εmail">
+          <div className='cta-action'>
+            <Input id="newsletter" type="email" label="Subscribe" labelHidden placeholder="Εmail" value={email} onChange={handleEmailChange}>
             </Input>
-
-            <Button tag="a" color="primary" wideMobile href="/contact">
+            <Button tag="a" color="primary" wideMobile onClick={sendMail}>
                    Εγγραφή
                     </Button>
           </div>

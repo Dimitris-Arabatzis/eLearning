@@ -307,5 +307,10 @@
     margin-bottom: 1rem;
     background-color: #ECEDED;
     border: px solid black !important;
+    color: #151719;
+}
+
+.cta-mail-invalid{
+    border: 2px solid red !important;
 }
 

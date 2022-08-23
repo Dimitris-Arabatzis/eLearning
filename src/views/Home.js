@@ -14,7 +14,6 @@ const Home = () => {
     <>
       <Hero className="illustration-section-01" />
       <CallToAction/>
-      <Cta split />
       <SecondOffering />
       <FeaturesTiles topDivider/>
       {/* <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" /> */}
