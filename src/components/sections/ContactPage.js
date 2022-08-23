@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
 import emailjs from '@emailjs/browser';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 
 
 
@@ -70,12 +72,12 @@ const Cta = ({
     e.preventDefault()
 
     if (!isValid(data.email)) {
-      alert('⛔️ Please add an email.')
+      Notify.failure('⛔️ Παρακαλώ προσθέστε σωστά το email.')
       return false
     }
 
     if (!isValid(message)) {
-      alert('⛔️ Please add a message.')
+      Notify.failure('⛔️ Παρακαλώ προσθέστε ένα μήνυμα.')
       return false
     }
 
@@ -89,10 +91,10 @@ const Cta = ({
     
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
         .then(function(response) {
-           alert("Thank you! We received your email. We are trying your best to get back to you as soon as possible!");
-           resetFields();
+          Notify.success("Λάβαμε το αίτημα σου και θα επικοινωνήσουμε μαζί σου το συντομότερο!");
+          resetFields();
         }, function(error) {
-           console.log('FAILED...', error);
+          console.log('FAILED...', error);
         });
   }
 

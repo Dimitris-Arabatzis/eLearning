@@ -7,7 +7,7 @@ import Image from '../elements/Image';
 import Button from '../elements/Button';
 import {useState} from 'react';
 import emailjs from '@emailjs/browser';
-
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const propTypes = {
   ...SectionProps.types,
@@ -88,20 +88,21 @@ const CallToAction = ({
 
   const sendMail = event => {
     if(subscribesAs==""){
-      alert("Παρακαλώ επιλέξτε αν είστε καθηγητής ή μαθητής.");
+      Notify.failure("⛔️Παρακαλώ επιλέξτε αν είστε καθηγητής ή μαθητής.");
+
       return;
     }
     if(!isMailValid){
-      alert("Παρακαλώ προσθέστε σωστά το email.");
+      Notify.failure("⛔️Παρακαλώ προσθέστε σωστά το email.");
       return;
     }
     console.log(templateParams);
-    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
-    .then(function(response) {
-       alert("Λάβαμε το αίτημα σου και θα επικοινωνήσουμε μαζί σου σε λίγο καιρό!");
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
+    // emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    // .then(function(response) {
+    //    Notify.success("Λάβαμε το αίτημα σου και θα επικοινωνήσουμε μαζί σου σε λίγο καιρό!");
+    // }, function(error) {
+    //    console.log('FAILED...', error);
+    // });
     setEmail('');
   }
   
