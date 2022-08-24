@@ -127,7 +127,7 @@ const CallToAction = ({
                 src={require('./../../assets/images/CallToAction/student.png')}
                 alt="Hero"
                 width={100} />
-                <p>Είμαι μαθητής!</p>
+                <p className='noselect'>Είμαι μαθητής!</p>
             </div>
             <div className={isTeacherActive ? 'cta-choise-teacher cta-choosen' : 'cta-choise-student'} onClick={() =>handleClick("teacher")}>
               <Image
@@ -135,13 +135,13 @@ const CallToAction = ({
                 src={require('./../../assets/images/CallToAction/teacher.png')}
                 alt="Hero"
                 width={100} />
-                <p>Είμαι καθηγητής!</p>
+                <p className='noselect'>Είμαι καθηγητής!</p>
             </div>
           </div>
           <div className='cta-action cta-action-group'>
             <Input id="newsletter" type="email" label="Subscribe" labelHidden placeholder="Εmail" value={email} onChange={handleEmailChange}>
             </Input>
-            <Button tag="a" color="primary" wideMobile onClick={sendMail}>
+            <Button tag="a" color="primary" wideMobile onClick={sendMail} className='noselect'>
                    Εγγραφή
                     </Button>
           </div>
