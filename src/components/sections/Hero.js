@@ -57,12 +57,17 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Γεια σας! Καλωσήρθατε στη <span className="text-color-primary">Lingi.gr</span>
+              Καλωσήρθατε στη <span className="text-color-primary">Lingi</span>!
             </h1>
             <div className="container-xs">
               <p className="m-0 reveal-from-bottom" data-reveal-delay="400">
-              Η ομάδα της Lingi, σε καλωσορίζει στον υπέροχο κόσμο της μάθησης, με σύγχρονους τρόπους διδασκαλίας ξένων γλωσσών από οπουδήποτε και οποτεδήποτε εσύ θελήσεις. 
-Προσφέρουμε κάτι μοναδικό που σίγουρα δεν θες να χάσεις! Οπότε συμπλήρωσε το email σου και δώσε μας λίγο χρόνο όσο ετοιμάζουμε κάτι ξεχωριστό για σένα!
+              Στην καλύτερη πλατφόρμα ξένων γλωσσών! <br></br>
+              Αυτό που προσφέρουμε είναι ασύγχρονα μαθήματα,<br></br>
+αλλά επίσης και εκατοντάδες καθηγητές για ιδιαίτερα μαθήματα.
+Αν είσαι καθηγητής, και ενδιαφέρεσαι να διδάξεις ή μαθητής και ενδιαφέρεσαι να παρακολουθήσεις ξενόγλωσσα μαθήματα, τότε συμπλήρωσε το email σου, και περίμενε λίγο όσο ετοιμάζουμε κάτι μοναδικό!
+
+
+
 
                 </p>
               {/* <div className="reveal-from-bottom" data-reveal-delay="600">

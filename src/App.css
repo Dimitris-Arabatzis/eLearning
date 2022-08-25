@@ -277,8 +277,8 @@
     height: 10rem;
     padding: 20px;
     margin-bottom: 2rem;
-    min-width: 200px;
-
+    min-width: 250px;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -295,6 +295,7 @@
 .cta-choosen{
     border: 3px solid black !important;
     box-shadow: 5px 10px;
+    transform: scale(1.1);
 }
 
 .cta-action{
@@ -308,7 +309,7 @@
 .cta-action input{
     margin-bottom: 1rem;
     background-color: #ECEDED;
-    border: px solid black !important;
+    border: 1px solid black !important;
     color: #151719;
 }
 
@@ -337,3 +338,20 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
   }
+
+.empty-choise{
+    min-width: 1px !important;
+    padding: 0 !important;
+    background-color: lightslategrey !important;
+    border: none !important;
+}
+
+@media (max-width: 768px){
+    .empty-choise{
+        display: none !important;
+    }
+}
+
+.cta-email{
+    min-width: 344px !important;
+}
