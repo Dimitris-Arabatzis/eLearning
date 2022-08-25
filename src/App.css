@@ -288,6 +288,10 @@
     background-color: aliceblue;
 }
 
+.cta-choises div:hover{
+    transform: scale(1.05); 
+}
+
 .cta-choises img{
     margin-bottom: 1rem;
 }
@@ -295,7 +299,8 @@
 .cta-choosen{
     border: 3px solid black !important;
     box-shadow: 5px 10px;
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
+    transition: all .2s ease-in-out;
 }
 
 .cta-action{
