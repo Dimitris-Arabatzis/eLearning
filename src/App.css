@@ -255,10 +255,6 @@
     border-radius: 9999px;
 }
 
-.clip{
-    clip-path: circle(60%);;
-}
-
 .m01{
     margin-top: -2rem;
 }
@@ -359,4 +355,44 @@
 
 .cta-email{
     min-width: 344px !important;
+}
+
+.cta-inner-custom {
+	padding-left: 16px;
+	padding-right: 16px;
+    background: none !important;
+    background-color: #5e7fa9 !important;
+    
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;    
+}
+
+.cta-inner-contact{
+    padding-left: 16px;
+	padding-right: 16px;
+    background: none !important;
+    background-color: none !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;  
+}
+
+.how-to-step{
+    margin-top: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.how-to-buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 5rem !important;
+}
+
+.contactus{
+    border: 1px solid #5e7fa9;
 }

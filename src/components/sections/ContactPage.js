@@ -40,7 +40,7 @@ const Cta = ({
   );
 
   const innerClasses = classNames(
-    'cta-inner section-inner clip',
+    'cta-inner cta-inner-contact section-inner',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'
@@ -118,7 +118,7 @@ const Cta = ({
         >
           <form onSubmit={handleSubmit}>
       <div className="my-12 flex w-full items-center justify-center">
-        <div className="top-40 rounded bg-white py-12 px-8 shadow-2xl lg:px-28">
+        <div className="top-40 rounded bg-white py-12 px-8 shadow-2xl lg:px-28 contactus">
           <p className="text-center text-xl font-bold leading-7 text-gray-700 md:text-3xl">
             Ελάτε να μιλήσουμε!
           </p>

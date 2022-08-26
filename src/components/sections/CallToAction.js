@@ -41,7 +41,7 @@ const CallToAction = ({
   );
 
   const innerClasses = classNames(
-    'cta-inner section-inner',
+    'cta-inner cta-inner-custom section-inner',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'
