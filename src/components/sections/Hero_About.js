@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   ...SectionProps.types
@@ -56,14 +57,7 @@ const Hero = ({
 
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="/about">
-                    Ποιοί Είμαστε;
-                    </Button>
-                  {/* <Button tag="a" color="dark" wideMobile href="https://www.instagram.com/lingi/">
-                    Instagram
-                    </Button> */}
-                </ButtonGroup>
+              <Link to="/Contact" className="button button-primary button-wide-mobile button-sm">Επικοινωνείστε μαζί μας!</Link>
               </div>
             </div>
           </div>
