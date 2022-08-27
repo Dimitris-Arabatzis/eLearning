@@ -361,7 +361,7 @@
 	padding-left: 16px;
 	padding-right: 16px;
     background: none !important;
-    background-color: #5e7fa9 !important;
+    background-color: #58cc02 !important;
     
 	background-repeat: no-repeat;
     background-size: cover;
@@ -393,6 +393,17 @@
     margin-bottom: 5rem !important;
 }
 
+.how-to-buttons a {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
 .contactus{
-    border: 1px solid #5e7fa9;
+    border: 1px solid #58cc02;
+}
+
+.how-to-choosen{
+    scale: 1.15;
 }
