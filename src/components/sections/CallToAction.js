@@ -126,10 +126,10 @@ const CallToAction = ({
           <div className="">
             <ButtonGroup className={"how-to-buttons"}>
             <Button tag="a" color={isStudentActive ? "primary how-to-choosen" : "dark"} wideMobile onClick={() => handleClick("student")}>
-              Θέλω να διδάξω
+            Θέλω να κάνω μαθήμα
             </Button>
             <Button tag="a" color={!isStudentActive ? "primary how-to-choosen" : "dark"} wideMobile onClick={() => handleClick("teacher")}>
-              Θέλω να κάνω μαθήμα
+              Θέλω να διδάξω
             </Button> 
           </ButtonGroup>
           </div>

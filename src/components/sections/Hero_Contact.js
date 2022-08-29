@@ -48,8 +48,16 @@ const HeroContact = ({
               Επικοινωνήστε μαζί μας!
             </h1>
             <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+              {/* <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
               Η ομάδα της Lingi, σε καλωσορίζει στον υπέροχο κόσμο της μάθησης ξένων γλωσσών. Προσφέρουμε κάτι μοναδικό που σίγουρα δεν θες να χάσεις! Οπότε συμπλήρωσε το email σου και δώσε μας λίγο χρόνο όσο ετοιμάζουμε κάτι ξεχωριστό για σένα!
+                </p> */}
+                <h3 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">Καθηγητές</h3>
+                <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+                Aν είσαι καθηγητής τότε έχεις την ευκαιρία να διδάξεις είτε ιδιαίτερα είτε μέσω βιντεοσκοπημένων μαθημάτων σε συνεργασία μαζί μας και να κερδίζεις σημαντικά χρήματα. Για οποιαδήποτε απορία, συμπλήρωσε την παρακάτω φόρμα άσε εμάς να σου απαντήσουμε στις απορίες.
+                </p>
+                <h3 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">Μαθητές</h3>
+                <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+                Αν ενδιαφέρεσαι να μάθεις κάποια ξένη γλώσσα, και έχεις οποιαδήποτε απορία, μπορείς να μας ρωτήσεις οτιδήποτε! Θα χαρούμε να συνομιλήσουμε!
                 </p>
             </div>
           </div>

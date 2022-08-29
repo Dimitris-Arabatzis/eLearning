@@ -457,17 +457,20 @@
     padding: 13px 0 13px 5px !important;
     margin: 0 !important;
     min-width: 300px;
+    border: 1px solid black !important;
+    border-right: none !important;
   }
   
   .cta-action input:focus {
     /* removing the input focus blue box. Put this on the form if you like. */
     outline: none;
-    border: none;
+    
   }
   
   .cta-action button {
     /* Just a little styling to make it pretty */
-    border:1px solid #58cc02;
+    border: 1px solid black !important;
+    border-left: none !important;
     background:#58cc02;
     color:white;
     cursor: pointer;

@@ -4,6 +4,7 @@ import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import { Link } from 'react-router-dom';
+import Image from '../elements/Image';
 
 const propTypes = {
   ...SectionProps.types
@@ -52,13 +53,24 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-              Η ομάδα της Lingi, σε καλωσορίζει στον υπέροχο κόσμο της μάθησης, με σύγχρονους τρόπους διδασκαλίας ξένων γλωσσών από οπουδήποτε και οποτεδήποτε εσύ θελήσεις. 
-Προσφέρουμε κάτι μοναδικό που σίγουρα δεν θες να χάσεις! Οπότε συμπλήρωσε το email σου και δώσε μας λίγο χρόνο όσο ετοιμάζουμε κάτι ξεχωριστό για σένα!
+              Η ομάδα του Lingi.gr, σε καλωσορίζει στον υπέροχο κόσμο της μάθησης ξένων γλωσσών. Προσφέρουμε κάτι μοναδικό που σίγουρα δεν θες να χάσεις! Στόχος μας είναι η δημιουργία μιας κοινότητας αποκλειστικά για ξένες γλώσσες! Στην πλατφόρμα μας μπορείς να μάθεις με 2 τρόπους:</p>
+              
+              <ol className="reveal-from-bottom" data-reveal-delay="400">
+                <li>
+Μέσω Βιντεοσκοπημένων μαθημάτων
+</li>
+<li>
+Μέσω ιδιαίτερων μαθημάτων </li>
 
-                </p>
+              </ol>
               <div className="reveal-from-bottom" data-reveal-delay="600">
               <Link to="/Contact" className="button button-primary button-wide-mobile button-sm">Επικοινωνείστε μαζί μας!</Link>
               </div>
+
+              <Image className="reveal-from-bottom" data-reveal-delay="600"
+                      src={require('./../../assets/images/about-us.png')}
+                      alt="About us icon explanation"
+                      />
             </div>
           </div>
           {/* <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
