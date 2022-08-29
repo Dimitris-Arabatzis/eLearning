@@ -426,9 +426,13 @@
     background-size: cover;
 }
 
-.how-to-image{
-    scale: 0.8;
+@media (min-width: 641px){
+    .how-to-image{
+        scale: 0.68;
+    }
 }
+
+
 
 .illustration-section-02{
     padding-top: 0px !important;
