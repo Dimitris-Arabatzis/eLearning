@@ -1,7 +1,3 @@
-.cta-inner{
-    margin-bottom: 70px !important;
-}
-
 .justify-center {
     justify-content: center;
 }
@@ -309,7 +305,7 @@
 
 .cta-action input{
     margin-bottom: 1rem;
-    background-color: #ECEDED;
+    background-color: white;
     border: 1px solid black !important;
     color: #151719;
 }
@@ -361,9 +357,7 @@
 	padding-left: 16px;
 	padding-right: 16px;
     background: none !important;
-    background-color: #58cc02 !important;
-    
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;    
 }
@@ -390,7 +384,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    margin-bottom: 5rem !important;
+    margin-bottom: 2rem !important;
+    
 }
 
 .how-to-buttons a {
@@ -398,6 +393,9 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    min-width: 230px;
 }
 
 .contactus{
@@ -407,3 +405,88 @@
 .how-to-choosen{
     scale: 1.15;
 }
+
+.site-header, .site-footer{
+    background-color: #58cc02;
+}
+
+.header-nav a.button{
+    border: 1px solid white;
+}
+
+@media (min-width: 641px){
+    .site-footer-inner {
+        
+        padding: 40px 0 !important;
+    }
+}
+
+.home-first-section{
+    background-image: url("./assets/images/home-section-background.png");
+    background-size: cover;
+}
+
+.how-to-image{
+    scale: 0.8;
+}
+
+.illustration-section-02{
+    padding-top: 0px !important;
+}
+
+.cta-action form{
+    /* This bit sets up the horizontal layout */
+  display:flex;
+  flex-direction:row;
+  
+  /* This bit draws the box around it */
+  
+
+  /* I've used padding so you can see the edges of the elements. */
+  padding:2px;
+  font-size: 16px;
+}
+
+
+.cta-action input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none !important;
+    outline: none;
+    padding: 13px 0 13px 5px !important;
+    margin: 0 !important;
+    min-width: 300px;
+  }
+  
+  .cta-action input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+    border: none;
+  }
+  
+  .cta-action button {
+    /* Just a little styling to make it pretty */
+    border:1px solid #58cc02;
+    background:#58cc02;
+    color:white;
+    cursor: pointer;
+  }
+
+  .cta-action button:hover {
+    /* Just a little styling to make it pretty */
+    background:#5cd602;
+  }
+
+  @media (min-width: 641px){
+      .cta .section-inner {
+        padding-top: 0 !important;
+      }
+
+  }
+
+  .cta-text{
+    margin-top: 25px;
+    font-size: 16px;
+    text-align: center;
+  }

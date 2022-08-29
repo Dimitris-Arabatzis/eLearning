@@ -10,8 +10,10 @@ const Home = () => {
 
   return (
     <>
+    <div className='home-first-section'>
       <Hero className="illustration-section-01" />
       <CallToAction/>
+    </div>
       {/* <SecondOffering /> */}
       <HowTo invertMobile imageFill className="illustration-section-02" />
       {/* <FeaturesTiles topDivider/> */}

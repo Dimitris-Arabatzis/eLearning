@@ -8,6 +8,8 @@ import Button from '../elements/Button';
 import {useState} from 'react';
 import emailjs from '@emailjs/browser';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import ButtonGroup from '../elements/ButtonGroup';
+import 'animate.css';
 
 const propTypes = {
   ...SectionProps.types,
@@ -87,6 +89,7 @@ const CallToAction = ({
   };
 
   const sendMail = event => {
+    event.preventDefault()
     if(subscribesAs===""){
       Notify.failure("⛔️Παρακαλώ επιλέξτε αν είστε καθηγητής ή μαθητής.");
 
@@ -111,41 +114,43 @@ const CallToAction = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container" id='signup'>
+      <div className="container animate__animated animate__tada" id='signup'>
         <div
           className={innerClasses}
         >
-          <div className="cta-slogan">
+          {/* <div className="cta-slogan">
             <h3 className="m-0 text-center" style={{color:"white"}}>
               Ενημερωθείτε όταν είμαστε έτοιμοι..
               </h3>
-          </div>
-          <div className="cta-choises">
-            <div className={isStudentActive ? 'cta-choise-student cta-choosen' : 'cta-choise-student'} onClick={() =>handleClick("student")}>
-              <Image
-                className=""
-                src={require('./../../assets/images/CallToAction/student.png')}
-                alt="Hero"
-                width={100} />
-                <p className='noselect'>Είμαι μαθητής-τρια!</p>
-            </div>
-            <div className="empty-choise">
-            </div>
-            <div className={isTeacherActive ? 'cta-choise-teacher cta-choosen' : 'cta-choise-teacher'} onClick={() =>handleClick("teacher")}>
-              <Image
-                className=""
-                src={require('./../../assets/images/CallToAction/teacher.png')}
-                alt="Hero"
-                width={100} />
-                <p className='noselect'>Είμαι καθηγητής-τρια!</p>
-            </div>
+          </div> */}
+          <div className="">
+            <ButtonGroup className={"how-to-buttons"}>
+            <Button tag="a" color={isStudentActive ? "primary how-to-choosen" : "dark"} wideMobile onClick={() => handleClick("student")}>
+              Θέλω να διδάξω
+            </Button>
+            <Button tag="a" color={!isStudentActive ? "primary how-to-choosen" : "dark"} wideMobile onClick={() => handleClick("teacher")}>
+              Θέλω να κάνω μαθήμα
+            </Button> 
+          </ButtonGroup>
           </div>
           <div className='cta-action cta-action-group'>
-            <Input id="newsletter" className={"cta-email"} type="email" label="Subscribe" labelHidden placeholder="Εmail" value={email} onChange={handleEmailChange}>
+            <form>
+            <input placeholder='onoma@kathigitis.com' onChange={handleEmailChange}/>
+            <button onClick={sendMail}>Εγγραφή</button>
+
+            </form>
+            {/* <Input id="newsletter" className={"cta-email"} type="email" label="Subscribe" labelHidden placeholder="Εmail" value={email} onChange={handleEmailChange}>
             </Input>
-            <Button tag="a" color="primary" wideMobile onClick={sendMail} className='noselect'>
+            <Input type="submit" value={"Αποστολή"}>
+            </Input> */}
+            {/* <Button tag="a" color="primary" wideMobile onClick={sendMail} className='noselect'>
                    Εγγραφή
-                    </Button>
+                    </Button> */}
+            <p className='cta-text'>
+            Συμπλήρωσε το email σου, 
+και γίνε μέλος της μεγαλύτερης κοινότητας<br></br> ξένων γλωσσών στην Ελλάδα!
+
+            </p>
           </div>
         </div>
       </div>

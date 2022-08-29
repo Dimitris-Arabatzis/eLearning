@@ -61,15 +61,17 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 reveal-from-bottom" data-reveal-delay="400">
-              Θέλεις ιδιαίτερα, ή ασύγχρονη εκπαίδευση;<br></br>
+              Θέλεις να κάνεις ιδιαίτερα, ή ασύγχρονη εκπαίδευση;
+
+<br></br>
               </p>
               <p className="mt-4 reveal-from-bottom" data-reveal-delay="400">
-θέλεις να διδάξεις ή να διδαχτείς ξένες γλώσσες;</p>
-<p className="mt-4 reveal-from-bottom" data-reveal-delay="400">
+              θέλεις να διδάξεις ή να μάθεις ξένες γλώσσες; </p>
+{/* <p className="mt-4 reveal-from-bottom" data-reveal-delay="400">
 Συμπλήρωσε το email σου, και γίνε μέλος της μεγαλύτερης κοινότητας ξένων γλωσσών στην Ελλάδα!<br></br>
 Σύντομα κοντά σου...
 
-                </p>
+                </p> */}
               {/* <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="/contact">

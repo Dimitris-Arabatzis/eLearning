@@ -83,7 +83,7 @@ const HowTo = ({
           <Image
             src={isStudent ? require('./../../assets/images/HowToStudent.png') : require('./../../assets/images/HowToTeacher.png') }
             alt="Open"
-            
+            className={"how-to-image"}
              />
 
           </div>
