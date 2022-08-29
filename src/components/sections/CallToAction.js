@@ -135,7 +135,7 @@ const CallToAction = ({
           </div>
           <div className='cta-action cta-action-group'>
             <form>
-            <input placeholder='onoma@kathigitis.com' onChange={handleEmailChange}/>
+            <input placeholder='name@yourmail.com' onChange={handleEmailChange}/>
             <button onClick={sendMail}>Εγγραφή</button>
 
             </form>
