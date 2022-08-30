@@ -520,5 +520,15 @@
     color: #338de9;
   }
 
-  
+  .footer-nav a {
+    color: white !important;
+  }
 
+  .footer-copyright {
+    color: white;
+}
+
+.footer-copyright a {
+    color: white;
+    font-style: italic;
+}
