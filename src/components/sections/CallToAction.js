@@ -95,17 +95,17 @@ const CallToAction = ({
 
       return;
     }
-    if(!isMailValid){
+    if(!isMailValid || email===""){
       Notify.failure("⛔️Παρακαλώ προσθέστε σωστά το email.");
       return;
     }
+    setEmail('');
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams,process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
     .then(function(response) {
        Notify.success("Λάβαμε το αίτημα σου και θα επικοινωνήσουμε μαζί σου σε λίγο καιρό!");
     }, function(error) {
        console.log('FAILED...', error);
     });
-    setEmail('');
   }
   
 
@@ -135,7 +135,7 @@ const CallToAction = ({
           </div>
           <div className='cta-action cta-action-group'>
             <form>
-            <input placeholder='name@yourmail.com' onChange={handleEmailChange}/>
+            <input placeholder='name@yourmail.com' value={email} onChange={handleEmailChange}/>
             <button onClick={sendMail}>Εγγραφή</button>
 
             </form>
