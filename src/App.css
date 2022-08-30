@@ -428,7 +428,8 @@
 
 @media (min-width: 641px){
     .how-to-image{
-        scale: 0.68;
+        margin-top: -10rem !important;
+        scale: 0.58;
     }
 }
 
