@@ -62,7 +62,6 @@ const CallToAction = ({
     }else{
       setIsMailValid(true);
     }
-    console.log(isMailValid);
   };
 
   const handleClick = (who) => {

@@ -82,7 +82,7 @@ const Header = ({
     let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
     return TotalDays;
   }
-  console.log(days(date_1,date_2));
+
   return (
     <header
       {...props}
