@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
+import Image from '../elements/Image';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -74,6 +75,14 @@ const Header = ({
     className
   );
 
+  let date_1 = new Date('12/28/2022');
+  let date_2 = new Date();
+  const days = (date_1, date_2) =>{
+    let difference = date_1.getTime() - date_2.getTime();
+    let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+    return TotalDays;
+  }
+  console.log(days(date_1,date_2));
   return (
     <header
       {...props}
@@ -86,6 +95,16 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           <Logo />
+          <div className="launching">
+          <Image className="reveal-from-bottom" data-reveal-delay="600"
+                      src={require('./../../assets/images/rocket.svg')}
+                      alt="About us icon explanation"
+                      width={40}
+                      />
+          
+            <p >Live <br></br>in <span>{days(date_1,date_2)}</span><br></br> days!</p>
+
+          </div>
           {!hideNav &&
             <>
               <button

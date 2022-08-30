@@ -503,3 +503,21 @@
     font-size: 16px;
     text-align: center;
   }
+
+  .launching{
+    display: flex;
+    font-size: 15px;
+    color: white;
+    line-height: 14px;
+    padding-top: 25px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .launching span{
+    color: #338de9;
+  }
+
+  
+
