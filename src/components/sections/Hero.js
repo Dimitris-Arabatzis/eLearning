@@ -61,12 +61,13 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 reveal-from-bottom" data-reveal-delay="400">
-              Θέλεις να κάνεις ιδιαίτερα, ή ασύγχρονη εκπαίδευση;
+              Θέλεις να διδάξεις ή να μάθεις ξένες γλώσσες; 
 
 <br></br>
               </p>
               <p className="mt-4 reveal-from-bottom" data-reveal-delay="400">
-              θέλεις να διδάξεις ή να μάθεις ξένες γλώσσες; </p>
+              Θέλεις να κάνεις ιδιαίτερα ή ασύγχρονη εκπαίδευση;
+              </p>
 {/* <p className="mt-4 reveal-from-bottom" data-reveal-delay="400">
 Συμπλήρωσε το email σου, και γίνε μέλος της μεγαλύτερης κοινότητας ξένων γλωσσών στην Ελλάδα!<br></br>
 Σύντομα κοντά σου...
