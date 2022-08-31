@@ -26,3 +26,5 @@ yarn-error.log*
 .vs/eLearning/v17/.suo
 .vs/eLearning/FileContentIndex/read.lock
 .vs/VSWorkspaceState.json
+public/manifest.json
+.vscode/settings.json
