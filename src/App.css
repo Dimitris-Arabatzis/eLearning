@@ -532,3 +532,15 @@
     color: white;
     font-style: italic;
 }
+
+.footer-social a svg {
+    fill: white !important;
+    transition: fill 0.15s ease;
+}
+
+
+.footer-social a svg:hover {
+    transform: scale(1.20);
+    fill: black !important;
+    transition: fill 0.15s ease;
+}
