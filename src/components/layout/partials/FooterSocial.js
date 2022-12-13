@@ -39,9 +39,12 @@ const FooterSocial = ({ className, ...props }) => {
             </svg>
           </a>
         </li> */}
-        {/* <li>
-          <a href="https://instagram.com/lingi" target="_blank"
-            rel="noopener noreferrer">
+        <li>
+          <a
+            href="https://www.instagram.com/lingi.gr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               width="16"
               height="16"
@@ -56,7 +59,7 @@ const FooterSocial = ({ className, ...props }) => {
               </g>
             </svg>
           </a>
-        </li> */}
+        </li>
       </ul>
     </div>
   );
