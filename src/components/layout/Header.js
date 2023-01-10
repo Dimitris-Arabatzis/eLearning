@@ -107,8 +107,8 @@ const Header = ({
             />
 
             <p>
-              Live <br></br>in <span>{days(date_1, date_2)}</span>
-              <br></br> days!
+              <span>Σύντομα</span> <br></br>κοντά
+              <br></br> σας!
             </p>
           </div>
           {!hideNav && (
